@@ -1,0 +1,16 @@
+FROM maven:3.9.11-eclipse-temurin-17 AS build
+WORKDIR /app
+
+COPY pom.xml .
+COPY src ./src
+
+# roda testes e empacota 
+RUN mvn -q clean test package
+
+FROM eclipse-temurin:17-jre
+WORKDIR /app
+
+# copia o jar gerado
+COPY --from=build /app/target/*.jar app.jar
+
+ENTRYPOINT ["java", "-jar", "app.jar"]

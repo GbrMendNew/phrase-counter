@@ -13,9 +13,10 @@ public class TextNormalizer {
         .normalize(lower, Normalizer.Form.NFD)
         .replaceAll("\\p{M}+", "");
 
+
     return noAccents
-        .replaceAll("[^a-z0-9 ]", " ")
-        .trim()
-        .replaceAll("\\s+", " ");
+      .replaceAll("[^\\p{L}\\p{N}]+", " ")
+      .trim()
+      .replaceAll("\\s+", " ");
   }
 }

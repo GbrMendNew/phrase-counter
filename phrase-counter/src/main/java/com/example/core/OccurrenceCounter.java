@@ -9,8 +9,9 @@ public class OccurrenceCounter {
   public static int countPhrase(String text, String phrase) {
     if (text == null || phrase == null) return 0;
 
-    String t = text.trim();
-    String p = phrase.trim();
+    // Normaliza ambos para evitar perder ocorrências por acento, caixa, pontuação etc.
+    String t = TextNormalizer.normalize(text);
+    String p = TextNormalizer.normalize(phrase);
 
     if (t.isBlank() || p.isBlank()) return 0;
 
@@ -31,8 +32,9 @@ public class OccurrenceCounter {
   public static Map<String, Integer> countWords(String text, String phrase) {
     if (phrase == null) return Map.of();
 
-    // palavras da frase (mantém ordem)
-    List<String> phraseWords = Tokenizer.tokenize(phrase);
+    // Normaliza a frase e mantém ordem das palavras
+    String normPhrase = TextNormalizer.normalize(phrase);
+    List<String> phraseWords = Tokenizer.tokenize(normPhrase);
 
     Map<String, Integer> result = new LinkedHashMap<>();
     for (String w : phraseWords) {
@@ -41,7 +43,10 @@ public class OccurrenceCounter {
 
     if (text == null || text.isBlank()) return result;
 
-    for (String token : Tokenizer.tokenize(text)) {
+    // Normaliza o texto antes de tokenizar
+    String normText = TextNormalizer.normalize(text);
+
+    for (String token : Tokenizer.tokenize(normText)) {
       if (result.containsKey(token)) {
         result.put(token, result.get(token) + 1);
       }
