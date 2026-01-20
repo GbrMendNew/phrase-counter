@@ -1,1 +1,5 @@
+com\example\core\TokenizerTest.class
+com\example\html\HtmlTextExtractorTest.class
+com\example\core\OccurrenceCounterTest.class
 com\example\core\TextNormalizerTest.class
+com\example\core\PhraseAnalysisServiceTest.class

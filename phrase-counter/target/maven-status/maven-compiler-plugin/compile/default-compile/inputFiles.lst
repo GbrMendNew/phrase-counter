@@ -1,4 +1,9 @@
 C:\dev\phrase-counter\phrase-counter\src\main\java\com\example\App.java
 C:\dev\phrase-counter\phrase-counter\src\main\java\com\example\core\OccurrenceCounter.java
+C:\dev\phrase-counter\phrase-counter\src\main\java\com\example\core\PhraseAnalysisResult.java
+C:\dev\phrase-counter\phrase-counter\src\main\java\com\example\core\PhraseAnalysisService.java
 C:\dev\phrase-counter\phrase-counter\src\main\java\com\example\core\TextNormalizer.java
 C:\dev\phrase-counter\phrase-counter\src\main\java\com\example\core\Tokenizer.java
+C:\dev\phrase-counter\phrase-counter\src\main\java\com\example\html\HtmlTextExtractor.java
+C:\dev\phrase-counter\phrase-counter\src\main\java\com\example\http\ContentFetcher.java
+C:\dev\phrase-counter\phrase-counter\src\main\java\com\example\http\HttpContentFetcher.java

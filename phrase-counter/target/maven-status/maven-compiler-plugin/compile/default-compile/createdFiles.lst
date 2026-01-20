@@ -1,2 +1,9 @@
-com\example\core\TextNormalizer.class
+com\example\http\ContentFetcher.class
+com\example\http\HttpContentFetcher.class
 com\example\App.class
+com\example\core\OccurrenceCounter.class
+com\example\html\HtmlTextExtractor.class
+com\example\core\PhraseAnalysisResult.class
+com\example\core\PhraseAnalysisService.class
+com\example\core\TextNormalizer.class
+com\example\core\Tokenizer.class
